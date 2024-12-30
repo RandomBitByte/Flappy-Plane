@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("download-link").addEventListener("click", function (event) {
-        event.preventDefault();
         incrementVariable("downloads");
     });
 
