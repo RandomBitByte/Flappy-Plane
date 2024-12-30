@@ -59,6 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("download-link").addEventListener("click", function (event) {
+        const downloadLink = event.target;
+        const href = downloadLink.getAttribute("href");
+        const a = document.createElement("a");
+        a.href = href;
+        a.setAttribute("download", downloadLink.getAttribute("download"));
+        a.click();
+        
         incrementVariable("downloads");
     });
 
